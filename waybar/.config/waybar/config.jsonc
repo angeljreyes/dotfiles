@@ -54,8 +54,13 @@
   },
   "clock#date": {
     "format": "{:%a %d/%m/%Y}",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "{:%Y-%m-%d}"
+    "tooltip-format": "<big>{calendar}</big>",
+    "format-alt": "{:%Y-%m-%d}",
+    "actions": {
+      "on-scroll-up": "shift_down",
+      "on-scroll-down": "shift_up",
+      "on-click-middle": "shift_reset"
+    }
   },
   "battery": {
     "states": {
