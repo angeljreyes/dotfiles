@@ -8,7 +8,7 @@
     ],
     "enabledThemes": [],
     "enableReactDevtools": false,
-    "frameless": false,
+    "frameless": true,
     "transparent": false,
     "winCtrlQ": false,
     "disableMinSize": false,
@@ -228,7 +228,8 @@
         "MemberCount": {
             "enabled": true,
             "toolTip": true,
-            "memberList": true
+            "memberList": true,
+            "voiceActivity": true
         },
         "MessageClickActions": {
             "enabled": false,
@@ -663,6 +664,15 @@
         },
         "ExpressionCloner": {
             "enabled": true
+        },
+        "AutoDNDWhilePlaying": {
+            "enabled": false
+        },
+        "CopyStickerLinks": {
+            "enabled": false
+        },
+        "ImageFilename": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -675,7 +685,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1748640772681
+        "settingsSyncVersion": 1759591087822
     },
     "eagerPatches": false
 }

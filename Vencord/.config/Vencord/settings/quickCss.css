@@ -1,18 +1,15 @@
 :root {
   --font-code: "JetBrainsMono Nerd Font" !important;
+  /* controls the vertical position of the window buttons */
+  --vr-header-snippet-top: 0px !important;
+  /* controls the space above the server list */
+  --vr-header-snippet-server-padding: 10px !important;
+  /* controls the space the window buttons get on the channel header, experiment around with this if you get gaps or the buttons overlap! */
+  --vr-header-snippet-space: 90px !important;
 }
 
 
 
 .buttons_d0696b > .container_efde15 {
   display: none;
-}
-
-:root {
-    /* controls the vertical position of the window buttons */
-    --vr-header-snippet-top: 0px !important;
-    /* controls the space above the server list */
-    --vr-header-snippet-server-padding: 10px !important;
-    /* controls the space the window buttons get on the channel header, experiment around with this if you get gaps or the buttons overlap! */
-    --vr-header-snippet-space: 90px !important;
 }
