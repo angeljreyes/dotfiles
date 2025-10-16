@@ -132,3 +132,8 @@ window#waybar {
 #custom-gamepad-battery {
   color: @sky;
 }
+
+#tray menu {
+  background: @base;
+  color: @text;
+}
