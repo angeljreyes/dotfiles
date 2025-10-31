@@ -4,7 +4,7 @@ My Linux dotfiles, manageable with GNU Stow:
 - Debian: `sudo apt install stow`
 ```sh
 cd
-git clone git@github.com:DestopLine/dotfiles.git
+git clone git@github.com:angeljreyes/dotfiles.git
 cd dotfiles
 stow i3 zsh  # stow i3 and zsh related packages
 stow */      # OR stow everything
@@ -21,4 +21,4 @@ git restore bash
 ```
 
 ## Neovim
-My neovim config can be found [here](https://github.com/DestopLine/nvim).
+My neovim config can be found [here](https://github.com/angeljreyes/nvim).
