@@ -1,14 +1,24 @@
+@import url('https://chloecinders.github.io/visual-refresh-compact-title-bar/desktop.css');
+
 :root {
   --font-code: "JetBrainsMono Nerd Font" !important;
+
+  
   /* controls the vertical position of the window buttons */
   --vr-header-snippet-top: 0px !important;
   /* controls the space above the server list */
-  --vr-header-snippet-server-padding: 10px !important;
+  --vr-header-snippet-server-padding: 16px !important;
   /* controls the space the window buttons get on the channel header, experiment around with this if you get gaps or the buttons overlap! */
-  --vr-header-snippet-space: 90px !important;
+  --vr-header-snippet-space: 230px !important;
+  /* controls the space to the right of the window buttons, good if you are using themes like midnight which add padding to the bar */
+  --vr-header-snippet-button-padding: 0 !important;
+  /* !DESKTOP SNIPPET ONLY! If set to none instead of flex, hides the window control buttons */
+  --vr-header-snippet-winbuttons: flex !important;
 }
 
-
+.winButtons_c38106 {
+  display: none !important;
+}
 
 .buttons_d0696b > .container_efde15 {
   display: none;
