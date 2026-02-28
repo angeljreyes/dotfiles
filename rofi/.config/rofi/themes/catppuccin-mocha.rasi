@@ -1,89 +1,87 @@
 // Original: https://codeberg.org/TGRush/dotfiles/src/branch/catppuccin/rofi/themes/catppuccin-mocha.rasi
 
 * {
-    bg-col: #1e1e2ec0;
-    bg-col-light: #181825c0;
-    border-col: #1e1e2ec0;
-    selected-col: #45475a60;
+    rosewater: #f5e0dc;
+    flamingo: #f2cdcd;
+    pink: #f5c2e7;
+    mauve: #cba6f7;
+    red: #f38ba8;
+    maroon: #eba0ac;
+    peach: #fab387;
+    yellow: #f9e2af;
+    green: #a6e3a1;
+    teal: #94e2d5;
+    sky: #89dceb;
+    sapphire: #74c7ec;
     blue: #89b4fa;
     lavender: #b4befe;
-    fg-col: #cdd6f4;
-    fg-col2: #f38ba8;
-    grey: #6c7086;
+    text: #cdd6f4;
+    subtext1: #bac2de;
+    subtext0: #a6adc8;
+    overlay2: #9399b2;
+    overlay1: #7f849c;
+    overlay0: #6c7086;
+    surface2: #585b70;
+    surface1: #45475a;
+    surface0: #313244;
+    base: #1e1e2e;
+    mantle: #181825;
+    crust: #11111b;
 
-    font: "JetBrainsMono Nerd Font 14";
-}
+    bg-col: #1e1e2ec0;
+    selected-col: #b4befe1a;
 
-element-text, element-icon , mode-switcher {
+    font: "JetBrainsMono Nerd Font Propo 14";
     background-color: transparent;
-    text-color: inherit;
+    text-color: @text;
 }
 
 window {
-    height: 450px;
     width: 800px;
     border: 2px;
+    padding: 18px;
     border-color: @lavender;
-    border-radius: 12px;
+    border-radius: 16px;
     background-color: @bg-col;
 }
 
 message {
-    background-color: transparent;
-    text-color: @fg-col;
-}
-
-textbox {
-    background-color: inherit;
-    text-color: inherit;
-    padding: 6px 0px 20px;
-    margin: 10px 0px 0px 20px;
+    padding: 14px 18px;
+    border: 2px;
 }
 
 mainbox {
-    background-color: transparent;
+    spacing: 12px;
 }
 
 inputbar {
-    children: [prompt,entry];
-    background-color: transparent;
-    border-radius: 5px;
-    padding: 2px;
+    children: [textbox-arrow, entry, prompt];
+    border: 2px;
+    border-color: @surface2;
+    border-radius: 16px;
+    padding: 14px 18px;
+    spacing: 14px;
+}
+
+textbox-arrow {
+    expand: false;
+    content: "❯";
+    text-color: @blue;
 }
 
 prompt {
-    background-color: @blue;
-    padding: 6px;
-    text-color: @bg-col;
-    border-radius: 3px;
-    margin: 20px 0px 0px 20px;
-}
-
-textbox-prompt-colon {
-    expand: false;
-    str: ":";
-}
-
-entry {
-    padding: 6px;
-    margin: 20px 0px 0px 10px;
-    text-color: @fg-col;
-    background-color: transparent;
+    text-color: @blue;
 }
 
 listview {
-    border: 0px 0px 0px;
-    padding: 6px 0px 0px;
-    margin: 10px 20px 0px 20px;
     columns: 1;
-    lines: 5;
-    background-color: transparent;
+    lines: 8;
 }
 
 element {
-    padding: 5px;
-    background-color: transparent;
-    text-color: @fg-col  ;
+    padding: 10px 12px;
+    border-radius: 12px;
+    spacing: 10px;
 }
 
 element-icon {
@@ -92,22 +90,8 @@ element-icon {
 
 element selected {
     background-color: @selected-col;
-    text-color: @fg-col2;
 }
 
-mode-switcher {
-    spacing: 0;
-}
-
-button {
-    padding: 10px;
-    background-color: transparent;
-    text-color: @grey;
-    vertical-align: 0.5; 
-    horizontal-align: 0.5;
-}
-
-button selected {
-    background-color: transparent;
+element-text selected {
     text-color: @blue;
 }

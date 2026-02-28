@@ -1,0 +1,5 @@
+@theme "base"
+
+element {
+    children: [element-text];
+}
