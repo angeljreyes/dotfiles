@@ -102,7 +102,7 @@
   "mpris": {
     "format": " {artist} - {title}",
     "player": "spotify",
-    "interval": 0.5,
+    "interval": 1,
     "max-length": 80
   },
   "mpris#tidal": {
