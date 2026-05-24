@@ -254,9 +254,6 @@
             "collapseDeleted": false,
             "inlineEdits": true
         },
-        "MessageTags": {
-            "enabled": false
-        },
         "MoreCommands": {
             "enabled": false
         },
@@ -455,14 +452,16 @@
                 {
                     "find": "",
                     "replace": "",
-                    "onlyIfIncludes": ""
+                    "onlyIfIncludes": "",
+                    "id": "9bfd4506-bd8f-42a6-a1db-3c3a38c818b1"
                 }
             ],
             "regexRules": [
                 {
                     "find": "",
                     "replace": "",
-                    "onlyIfIncludes": ""
+                    "onlyIfIncludes": "",
+                    "id": "84f8f709-ba89-4acc-b0e1-a853051e179c"
                 }
             ]
         },
@@ -673,6 +672,12 @@
         },
         "ImageFilename": {
             "enabled": false
+        },
+        "CustomCommands": {
+            "enabled": false
+        },
+        "MoreQuickReactions": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -685,7 +690,11 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1761939871087
+        "settingsSyncVersion": 1773622053044
     },
-    "eagerPatches": false
+    "eagerPatches": false,
+    "uiElements": {
+        "chatBarButtons": {},
+        "messagePopoverButtons": {}
+    }
 }
