@@ -16,7 +16,7 @@ fi
 case "$@" in
     "Lock") (sleep 0.1 && hyprlock) > /dev/null 2>&1 & disown ;;
     "Sleep") (sleep 0.1 && hyprlock & disown && systemctl suspend) > /dev/null 2>&1 ;;
-    "Log Out") hyprctl dispatch exit ;;
+    "Log Out") hyprctl dispatch 'hl.dsp.exit()' ;;
     "Reboot") reboot ;;
     "Shutdown") shutdown -h now ;;
 esac
