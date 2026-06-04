@@ -15,6 +15,9 @@ local default = altgr_intl
 
 ---@param window HL.Window
 hl.on("window.active", function(window)
+	if window.workspace == nil then
+		return
+	end
 	local layout = layouts[window.workspace.config_name] or default
 	hl.exec_cmd("hyprctl switchxkblayout current " .. layout)
 end)
