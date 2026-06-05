@@ -24,6 +24,11 @@ hl.device({
 })
 
 hl.device({
+	name = "rdmctmzt-evo75-2.4g",
+	kb_options = "",
+})
+
+hl.device({
 	name = "msft0002:00-04f3:31ad-touchpad",
 	sensitivity = 0.4,
 	accel_profile = "adaptive",
