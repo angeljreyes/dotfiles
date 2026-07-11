@@ -1,4 +1,4 @@
-local vars = require("variables")
+local vars = require("modules.variables")
 
 local main_mod = "SUPER"
 

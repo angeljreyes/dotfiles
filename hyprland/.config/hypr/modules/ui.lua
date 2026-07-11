@@ -1,4 +1,4 @@
-local mocha = require("mocha")
+local mocha = require("modules.mocha")
 
 hl.config({
 	general = {

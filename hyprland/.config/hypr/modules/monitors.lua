@@ -1,6 +1,6 @@
 local M = {}
+local vars = require("modules.variables")
 
-local vars = require("variables")
 
 hl.monitor({
     output = vars.laptop_monitor,

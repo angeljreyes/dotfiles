@@ -1,4 +1,4 @@
-local vars = require("variables")
+local vars = require("modules.variables")
 
 hl.workspace_rule({ workspace = "1", default_name = "dev", monitor = vars.main_monitor })
 hl.workspace_rule({ workspace = "2", default_name = "web", monitor = vars.main_monitor })

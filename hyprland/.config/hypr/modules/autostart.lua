@@ -1,4 +1,4 @@
-local vars = require("variables")
+local vars = require("modules.variables")
 
 hl.on("hyprland.start", function()
 	hl.exec_cmd("nm-applet")
@@ -18,4 +18,8 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("discord --use-gl=desktop")
 	hl.exec_cmd("spotify-launcher")
 	hl.exec_cmd("pano-scrobbler --minimized")
+
+	hl.exec_cmd("hyprctl setcursor Numix-Cursor-Light 24")
+	hl.exec_cmd("gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'")
+	hl.exec_cmd("gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3'")
 end)
