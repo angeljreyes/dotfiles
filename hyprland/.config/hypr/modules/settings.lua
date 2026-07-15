@@ -37,6 +37,21 @@ H.settings = {
 		call_on_reload = true,
 		call_on_start = true,
 	},
+
+	monitors = {
+		label = "󰍺 Monitors",
+		value = "default",
+		meta = { "screens" },
+		options = {
+			default = "Default",
+			mirror = "Mirror",
+			extend = "Extend",
+			only_main = "Main monitor only",
+		},
+		callback = function()
+			hl.exec_cmd("hyprctl reload")
+		end,
+	},
 }
 
 ---@param name string
