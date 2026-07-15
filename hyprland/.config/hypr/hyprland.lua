@@ -1,3 +1,4 @@
+require("modules.settings")
 require("modules.monitors")
 require("modules.environment")
 require("modules.layouts")

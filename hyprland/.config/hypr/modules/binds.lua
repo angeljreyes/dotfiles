@@ -100,7 +100,18 @@ hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true 
 hl.bind("XF86Calculator", hl.dsp.exec_cmd("rofi -show calc -no-show-match -no-sort"))
 
 -- Suspend when closing the lid
-hl.bind("switch:on:Lid Switch", hl.dsp.exec_cmd("hyprlock & disown && systemctl suspend"), { locked = true })
+hl.bind("switch:on:Lid Switch", function()
+	local behavior
+	if Settings.lid_behavior == "auto" then
+		behavior = #hl.get_monitors() == 1 and "sleep" or "nothing"
+	else
+		behavior = Settings.lid_behavior
+	end
+
+	if behavior == "sleep" then
+		return hl.exec_cmd("hyprlock & disown && systemctl suspend")
+	end
+end, { locked = true })
 
 hl.bind(keys(main_mod, "f11"), hl.dsp.window.fullscreen())
 hl.bind(keys(main_mod, "u"), hl.dsp.window.float())
@@ -121,3 +132,5 @@ end
 hl.bind(keys(main_mod, "1"), function() switch_layout("scrolling") end)
 hl.bind(keys(main_mod, "2"), function() switch_layout("dwindle") end)
 hl.bind(keys(main_mod, "3"), function() switch_layout("monocle") end)
+
+hl.bind(keys(main_mod, "semicolon"), function() Settings() end)

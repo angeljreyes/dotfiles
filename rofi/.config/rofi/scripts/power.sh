@@ -6,7 +6,7 @@ if [ $# -eq 0 ]; then
     printf "\0theme\x1felement { children: [element-text]; } listview { lines: 1; columns: 5; }\n"
 
     printf "Lock\0display\x1f Lock\n"
-    printf "Sleep\0display\x1f󰤄 Sleep\n"
+    printf "Sleep\0display\x1f󰤄 Sleep\x1fmeta\x1fsuspend\n"
     printf "Log Out\0display\x1f󰍃 Log Out\n"
     printf "Reboot\0display\x1f Reboot\n"
     printf "Shutdown\0display\x1f Shutdown\n"

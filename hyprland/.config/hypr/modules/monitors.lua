@@ -1,7 +1,6 @@
 local M = {}
 local vars = require("modules.variables")
 
-
 hl.monitor({
     output = vars.laptop_monitor,
 	mode = "preferred",

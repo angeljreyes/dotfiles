@@ -1,1 +1,11 @@
-"$schema" = "https://yazi-rs.github.io/schemas/keymap.json"
+[mgr]
+prepend_keymap = [
+  { on = [ "g", "/" ], run = "cd /", desc = "Go to /" },
+  { on = "<C-/>", run = "help", desc = "Open the help menu" },
+]
+
+[help]
+prepend_keymap = [
+  { on = "q", run = "close", desc = "Close help" },
+  { on = "/", run = "filter", desc = "Filter keymaps" },
+]

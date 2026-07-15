@@ -53,7 +53,8 @@
         },
         "Settings": {
             "enabled": true,
-            "settingsLocation": "top"
+            "settingsLocation": "top",
+            "includeVencordInfoWhenCopying": true
         },
         "SupportHelper": {
             "enabled": true
@@ -678,6 +679,12 @@
         },
         "MoreQuickReactions": {
             "enabled": false
+        },
+        "CharacterCounter": {
+            "enabled": false
+        },
+        "NoMiddleClickPaste": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -690,11 +697,12 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1773622053044
+        "settingsSyncVersion": 1780868501955
     },
     "eagerPatches": false,
     "uiElements": {
         "chatBarButtons": {},
         "messagePopoverButtons": {}
-    }
+    },
+    "windowsMaterial": "none"
 }

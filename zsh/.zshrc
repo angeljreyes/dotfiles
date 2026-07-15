@@ -104,3 +104,10 @@ export PATH=$PATH:~/.cargo/bin
 
 export NVIM_PROFILE='home'
 export EDITOR=nvim
+
+export DEVKITPRO=/opt/devkitpro
+export DEVKITARM=/opt/devkitpro/devkitARM
+export DEVKITPPC=/opt/devkitpro/devkitPPC
+
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
