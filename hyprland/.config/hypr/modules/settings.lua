@@ -4,6 +4,8 @@
 ---@field callback fun(new: boolean | string)?
 ---@field options table<string, string>?
 ---@field meta string[]?
+---@field call_on_start boolean?
+---@field call_on_reload boolean?
 
 local H = {}
 
@@ -32,6 +34,8 @@ H.settings = {
 				hl.exec_cmd("hyprctl hyprsunset identity")
 			end
 		end,
+		call_on_reload = true,
+		call_on_start = true,
 	},
 }
 
@@ -153,22 +157,19 @@ end
 Settings = {
 	callback = function() end,
 
-	reload = function()
+	load = function()
 		hl.exec_cmd("mkdir -p " .. H.directory)
 
 		for name, setting in pairs(H.settings) do
 			local value = H.read_setting(name)
 			if
-				value == nil
-				or (setting.options == nil and type(value) ~= "boolean")
-				or (setting.options ~= nil and setting.options[value] == nil)
+				value == nil -- File doesn't exist
+				or (setting.options == nil and type(value) ~= "boolean") -- Boolean setting has non-boolean value
+				or (setting.options ~= nil and setting.options[value] == nil) -- Setting is not a valid option
 			then
-				H.write_setting(name, setting.value)
+				H.write_setting(name, setting.value) -- Write default value
 			else
 				setting.value = value
-				if setting.callback then
-					setting.callback(value)
-				end
 			end
 		end
 	end,
@@ -187,4 +188,22 @@ local settings_meta = {
 
 setmetatable(Settings, settings_meta)
 
-Settings.reload()
+Settings.load()
+
+for _, setting in pairs(H.settings) do
+	if setting.call_on_start then
+		hl.on("hyprland.start", function()
+			if setting.callback then
+				setting.callback(setting.value)
+			end
+		end)
+	end
+
+	if setting.call_on_reload then
+		hl.on("config.reloaded", function()
+			if setting.callback then
+				setting.callback(setting.value)
+			end
+		end)
+	end
+end
