@@ -52,6 +52,18 @@ H.settings = {
 			hl.exec_cmd("hyprctl reload")
 		end,
 	},
+
+	airplane_mode = {
+		label = "󰀝 Airplane mode",
+		value = false,
+		callback = function(new)
+			if new then
+				hl.exec_cmd("rfkill block all")
+			else
+				hl.exec_cmd("rfkill unblock all")
+			end
+		end
+	}
 }
 
 ---@param name string
