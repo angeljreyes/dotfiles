@@ -94,7 +94,7 @@ export FZF_DEFAULT_OPTS=" \
 --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
 eval "$(zoxide init zsh --cmd cd)"
 
-source /usr/share/nvm/init-nvm.sh
+eval "$(mise activate zsh)"
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)
