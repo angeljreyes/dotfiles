@@ -213,16 +213,6 @@
         "KeepCurrentChannel": {
             "enabled": false
         },
-        "LastFMRichPresence": {
-            "enabled": false,
-            "shareUsername": false,
-            "hideWithSpotify": true,
-            "statusName": "some music",
-            "nameFormat": "status-name",
-            "useListeningStatus": false,
-            "missingArt": "lastfmLogo",
-            "showLastFmLogo": true
-        },
         "LoadingQuotes": {
             "enabled": false
         },
@@ -685,6 +675,16 @@
         },
         "NoMiddleClickPaste": {
             "enabled": false
+        },
+        "MusicRichPresence": {
+            "enabled": false,
+            "shareUsername": false,
+            "hideWithSpotify": true,
+            "statusName": "some music",
+            "nameFormat": "status-name",
+            "useListeningStatus": false,
+            "missingArt": "lastfmLogo",
+            "showLogo": true
         }
     },
     "notifications": {
@@ -697,7 +697,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1780868501955
+        "settingsSyncVersion": 1784852847441
     },
     "eagerPatches": false,
     "uiElements": {
