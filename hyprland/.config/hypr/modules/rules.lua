@@ -8,15 +8,22 @@ hl.workspace_rule({ workspace = "5", default_name = "game", monitor = vars.main_
 hl.workspace_rule({ workspace = "6", default_name = "tool", monitor = vars.main_monitor })
 hl.workspace_rule({ workspace = "7", default_name = "misc", monitor = vars.main_monitor })
 
-hl.window_rule({ match = { class = "com.github.hluk.copyq" }, float = true })
+hl.window_rule({ match = { class = "com.github.hluk.copyq" }, float = true, pin = true })
 hl.window_rule({ match = { class = "blueman-manager" }, float = true })
-hl.window_rule({ match = { class = "org.pulseaudio.pavucontrol" }, float = true })
-hl.window_rule({ match = { class = "(zen|firefox) title:Picture-in-Picture" }, float = true })
+hl.window_rule({
+	match = { class = "org.pulseaudio.pavucontrol" },
+	float = true,
+	pin = true,
+	size = { "(monitor_w * 0.5)", "(monitor_h * 0.6)" },
+	move = { "(cursor_x - (window_w * 1.5))", "(cursor_y + 32)" },
+})
+hl.window_rule({
+	match = { class = "blueman.*" },
+	pin = true,
+	size = { "300", "600" },
+})
 hl.window_rule({ match = { class = "Rofi" }, pin = true })
-hl.window_rule({ match = { class = "org.pulseaudio.pavucontrol" }, pin = true })
-hl.window_rule({ match = { class = "blueman.*" }, pin = true })
-hl.window_rule({ match = { class = "com.github.hluk.copyq" }, pin = true })
-hl.window_rule({ match = { class = "(zen|firefox) title:Picture-in-Picture" }, pin = true })
+hl.window_rule({ match = { class = "(zen|firefox) title:Picture-in-Picture" }, float = true, pin = true })
 
 hl.window_rule({ match = { class = "kitty" }, workspace = 1 })
 hl.window_rule({ match = { class = "firefox" }, workspace = 2 })
