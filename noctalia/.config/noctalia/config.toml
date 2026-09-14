@@ -1,0 +1,123 @@
+[shell]
+polkit_agent = true
+settings_window_translucent = true
+time_format = "%l:%M %p"
+date_format = "%e %b %Y"
+font_family = "sans-serif"
+
+[shell.panel]
+transparency_mode = "glass"
+open_near_click_control_center = true
+control_center_placement = "floating"
+wallpaper_placement = "floating"
+session_placement = "floating"
+floating_offset = 6
+
+[shell.launcher]
+categories = false
+auto_paste = "off"
+
+[shell.greeter_sync]
+auto_sync = true
+
+[shell.mpris]
+blacklist = ["Mozilla Zen"]
+
+[shell.screenshot]
+save_to_file = false
+confirm_region = true
+
+[keybinds]
+up = ["up", "ctrl+p"]
+down = ["down", "ctrl+n"]
+
+[bar.default]
+background_opacity = 0.65
+border_width = 2
+thickness = 38
+concave_edge_corners = false
+widget_spacing = 10
+margin_ends = 6
+margin_edge = 6
+font_scale = 0.95
+start = ["media"]
+center = ["workspaces"]
+end = ["battery", "volume", "network", "bluetooth", "clock", "notifications", "tray"]
+
+[bar.default.dead_zone.actions]
+middle = "panel-toggle session"
+
+[widget.clock]
+format = "%l:%M:%S %p   %a %e %b"
+
+[widget.network]
+show_label = false
+scale = 1.1
+
+[widget.bluetooth]
+scale = 1.1
+
+[widget.workspaces]
+scale = 1.5
+label_source = "name"
+active_pill_size = 1.4
+inactive_pill_size = 1.4
+occupied_color = "outline"
+font_family = "JetBrainsMono Nerd Font Propo"
+
+[widget.tray]
+drawer = true
+hide_passive = false
+scale = 1.1
+
+[widget.notifications]
+scale = 1.1
+
+[widget.media]
+artist_first = true
+max_length = 400
+
+[control_center]
+sidebar_section = "none"
+hidden_tabs = [
+    "media",
+    "power",
+    "audio",
+    "network",
+    "bluetooth",
+    "notifications",
+    "calendar",
+]
+shortcuts = [
+    { type = "nightlight" },
+    { type = "8bury/lid-guard:lid-guard-toggle" },
+]
+
+[notification]
+background_opacity = 0.65
+offset_y = 20
+
+[notification.filter.lid-guard]
+match_content = "^Lid Guard (enabled|disabled)$"
+show_toast = false
+save_history = false
+play_sound = false
+
+[location]
+auto_locate = true
+
+[nightlight]
+temperature_night = 5000
+
+[osd.kinds]
+keyboard_layout = false
+media = false
+
+[theme]
+source = "community"
+community_palette = "Catppuccin Mocha Mauve-Lavender"
+
+[plugins]
+enabled = [
+    "8bury/lid-guard",
+]
