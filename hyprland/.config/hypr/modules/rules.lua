@@ -24,6 +24,11 @@ hl.window_rule({
 })
 hl.window_rule({ match = { class = "Rofi" }, pin = true })
 hl.window_rule({ match = { class = "(zen|firefox) title:Picture-in-Picture" }, float = true, pin = true })
+hl.window_rule({
+    match = { class = "dev.noctalia.Noctalia" },
+    float = true,
+    size = { "(monitor_w * 0.7)", "(monitor_h * 0.8)" },
+})
 
 hl.window_rule({ match = { class = "kitty" }, workspace = 1 })
 hl.window_rule({ match = { class = "firefox" }, workspace = 2 })

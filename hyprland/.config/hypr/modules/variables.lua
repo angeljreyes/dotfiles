@@ -8,6 +8,6 @@ M.secondary_monitor = M.laptop_monitor
 
 M.terminal = "kitty"
 M.file_manager = "dolphin"
-M.menu = "rofi -show drun"
+M.menu = "noctalia msg panel-toggle launcher"
 
 return M

@@ -52,6 +52,16 @@ hl.config({
 hl.layer_rule({ match = { namespace = "rofi" }, blur = true })
 hl.layer_rule({ match = { namespace = "notifications" }, blur = true })
 hl.layer_rule({ match = { namespace = "waybar" }, blur = true, ignore_alpha = 0 })
+hl.layer_rule({
+	name = "noctalia",
+	match = {
+		namespace = "^noctalia-(bar-.+|notification|dock|panel|attached-panel|osd|window-switcher)$",
+	},
+	no_anim = true,
+	ignore_alpha = 0.2,
+	blur = true,
+	blur_popups = true,
+})
 
 hl.curve("easeOutQuint", { type = "bezier", points = { { 0.23, 1 }, { 0.32, 1 } } })
 hl.curve("easeInOutCubic", { type = "bezier", points = { { 0.65, 0.05 }, { 0.36, 1 } } })

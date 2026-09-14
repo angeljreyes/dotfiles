@@ -1,17 +1,10 @@
 local vars = require("modules.variables")
 
 hl.on("hyprland.start", function()
-	hl.exec_cmd("nm-applet")
-	hl.exec_cmd("blueman-applet")
-	hl.exec_cmd("systemctl --user start hyprpolkitagent")
-	hl.exec_cmd("copyq")
-	hl.exec_cmd("hyprpaper")
-	hl.exec_cmd("hyprsunset")
-	hl.exec_cmd("waybar")
-	hl.exec_cmd("python3 ~/.config/hypr/kb_layouts.py")
+	hl.exec_cmd("noctalia")
+
 	hl.exec_cmd("udiskie")
 	hl.exec_cmd("playerctld")
-	hl.exec_cmd("dunst")
 	hl.exec_cmd("easyeffects --gapplication-service")
 
 	hl.exec_cmd(vars.terminal)

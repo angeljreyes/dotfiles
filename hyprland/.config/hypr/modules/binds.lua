@@ -11,22 +11,18 @@ hl.bind(keys(main_mod, "return"), hl.dsp.exec_cmd(vars.terminal))
 hl.bind(keys(main_mod, "q"), hl.dsp.window.close())
 hl.bind(keys(main_mod, "SHIFT", "q"), hl.dsp.window.kill())
 hl.bind(keys(main_mod, "CTRL", "q"), hl.dsp.exec_cmd("hyprctl kill"))
-hl.bind(keys(main_mod, "v"), hl.dsp.exec_cmd("copyq show"))
+hl.bind(keys(main_mod, "v"), hl.dsp.exec_cmd("noctalia msg panel-toggle clipboard"))
 hl.bind(keys(main_mod, "space"), hl.dsp.exec_cmd(vars.menu))
 hl.bind(keys("ALT", "space"), hl.dsp.exec_cmd("fcitx5-remote --check && fcitx5-remote -e || fcitx5 -d"))
 hl.bind(keys(main_mod, "ALT", "space"), hl.dsp.send_shortcut({ mods = "ALT", key = "space" }))
-hl.bind(keys(main_mod, "CTRL", "c"), hl.dsp.exec_cmd("rofi -show calc -no-show-match -no-sort -theme calc"))
-hl.bind(keys(main_mod, "p"), hl.dsp.exec_cmd("rofi -show power"))
-hl.bind(keys(main_mod, "r"), hl.dsp.exec_cmd("hyprctl reload; killall waybar; waybar"))
+hl.bind(keys(main_mod, "period"), hl.dsp.exec_cmd("noctalia msg panel-toggle launcher '/calc '"))
+hl.bind(keys(main_mod, "p"), hl.dsp.exec_cmd("noctalia msg panel-toggle session"))
+hl.bind(keys(main_mod, "r"), hl.dsp.exec_cmd("hyprctl reload; killall noctalia; noctalia"))
 
--- Screenshot selection into clipboard
-hl.bind("print", hl.dsp.exec_cmd("grimblast copy area --freeze"))
--- Screenshot current monitor into clipboard
-hl.bind(keys("CTRL", "print"), hl.dsp.exec_cmd("grimblast copy output --freeze"))
--- Screenshot selection into editor
-hl.bind(keys("SHIFT", "print"), hl.dsp.exec_cmd("grimblast save area - --freeze | swappy -f -"))
--- Paste image into editor
-hl.bind(keys(main_mod, "SHIFT", "v"), hl.dsp.exec_cmd("wl-paste | swappy -f -"))
+-- Screenshot and annotation
+hl.bind("print", hl.dsp.exec_cmd("noctalia msg screenshot-annotate"))
+hl.bind(keys("CTRL", "print"), hl.dsp.exec_cmd("noctalia msg screenshot-fullscreen"))
+hl.bind(keys("SHIFT", "print"), hl.dsp.exec_cmd("noctalia msg annotate"))
 
 -- Cycle windows
 hl.bind(keys(main_mod, "tab"), hl.dsp.layout("cyclenext"), { repeating = true })
@@ -98,20 +94,6 @@ hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl pause"), { locked = true })
 hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
 hl.bind("XF86Calculator", hl.dsp.exec_cmd("rofi -show calc -no-show-match -no-sort"))
-
--- Suspend when closing the lid
-hl.bind("switch:on:Lid Switch", function()
-	local behavior
-	if Settings.lid_behavior == "auto" then
-		behavior = #hl.get_monitors() == 1 and "sleep" or "nothing"
-	else
-		behavior = Settings.lid_behavior
-	end
-
-	if behavior == "sleep" then
-		return hl.exec_cmd("hyprlock & disown && systemctl suspend")
-	end
-end, { locked = true })
 
 hl.bind(keys(main_mod, "f11"), hl.dsp.window.fullscreen())
 hl.bind(keys(main_mod, "u"), hl.dsp.window.float())
