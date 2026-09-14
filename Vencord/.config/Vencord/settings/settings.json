@@ -4,12 +4,12 @@
     "autoUpdateNotification": true,
     "useQuickCss": true,
     "themeLinks": [
-        "https://raw.githubusercontent.com/surgedevs/visual-refresh-compact-title-bar/refs/heads/main/desktop.css"
+        "https://raw.githubusercontent.com/PL7963/Discord-Mica/refs/heads/main/src/main.css"
     ],
     "enabledThemes": [],
     "enableReactDevtools": false,
     "frameless": true,
-    "transparent": false,
+    "transparent": true,
     "winCtrlQ": false,
     "disableMinSize": false,
     "winNativeTitleBar": false,
@@ -243,7 +243,8 @@
             "ignoreChannels": "",
             "ignoreGuilds": "",
             "collapseDeleted": false,
-            "inlineEdits": true
+            "inlineEdits": true,
+            "logDeletedAttachments": true
         },
         "MoreCommands": {
             "enabled": false
@@ -444,7 +445,8 @@
                     "find": "",
                     "replace": "",
                     "onlyIfIncludes": "",
-                    "id": "9bfd4506-bd8f-42a6-a1db-3c3a38c818b1"
+                    "id": "9bfd4506-bd8f-42a6-a1db-3c3a38c818b1",
+                    "name": ""
                 }
             ],
             "regexRules": [
@@ -452,7 +454,8 @@
                     "find": "",
                     "replace": "",
                     "onlyIfIncludes": "",
-                    "id": "84f8f709-ba89-4acc-b0e1-a853051e179c"
+                    "id": "84f8f709-ba89-4acc-b0e1-a853051e179c",
+                    "name": ""
                 }
             ]
         },
@@ -685,6 +688,15 @@
             "useListeningStatus": false,
             "missingArt": "lastfmLogo",
             "showLogo": true
+        },
+        "TenorGifSearch": {
+            "enabled": false
+        },
+        "ConcatenatedComponentExtractor": {
+            "enabled": true
+        },
+        "AddAttachments": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -697,7 +709,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1784852847441
+        "settingsSyncVersion": 1789342709565
     },
     "eagerPatches": false,
     "uiElements": {
