@@ -60,10 +60,10 @@ hl.bind(keys(main_mod, "SHIFT", "c"), hl.dsp.window.move({ workspace = 7 }))
 
 -- Move window border
 local resize_amount = 20
-hl.bind(keys(main_mod, "CTRL", "h"), hl.dsp.window.resize({ x = -resize_amount, y = 0 }), { repeating = true })
-hl.bind(keys(main_mod, "CTRL", "j"), hl.dsp.window.resize({ x = 0, y = resize_amount }), { repeating = true })
-hl.bind(keys(main_mod, "CTRL", "k"), hl.dsp.window.resize({ x = 0, y = -resize_amount }), { repeating = true })
-hl.bind(keys(main_mod, "CTRL", "l"), hl.dsp.window.resize({ x = resize_amount, y = 0 }), { repeating = true })
+hl.bind(keys(main_mod, "CTRL", "h"), hl.dsp.window.resize({ x = -resize_amount, y = 0, relative = true }), { repeating = true })
+hl.bind(keys(main_mod, "CTRL", "j"), hl.dsp.window.resize({ x = 0, y = resize_amount, relative = true }), { repeating = true })
+hl.bind(keys(main_mod, "CTRL", "k"), hl.dsp.window.resize({ x = 0, y = -resize_amount, relative = true }), { repeating = true })
+hl.bind(keys(main_mod, "CTRL", "l"), hl.dsp.window.resize({ x = resize_amount, y = 0, relative = true }), { repeating = true })
 
 -- Resize scrolling window
 hl.bind(keys(main_mod, "CTRL", "minus"), hl.dsp.layout("colresize -conf"))
