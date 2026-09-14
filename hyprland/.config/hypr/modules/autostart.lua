@@ -14,6 +14,5 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("pano-scrobbler --minimized")
 
 	hl.exec_cmd("hyprctl setcursor Numix-Cursor-Light 24")
-	hl.exec_cmd("gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'")
-	hl.exec_cmd("gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3'")
+	hl.exec_cmd("nwg-look -a")
 end)
