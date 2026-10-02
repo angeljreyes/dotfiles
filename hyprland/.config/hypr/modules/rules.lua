@@ -54,3 +54,17 @@ hl.window_rule({
 	},
 	no_focus = true,
 })
+
+hl.layer_rule({ match = { namespace = "rofi" }, blur = true })
+hl.layer_rule({ match = { namespace = "notifications" }, blur = true })
+hl.layer_rule({ match = { namespace = "waybar" }, blur = true, ignore_alpha = 0 })
+hl.layer_rule({
+	name = "noctalia",
+	match = {
+		namespace = "^noctalia-(bar-.+|notification|dock|panel|attached-panel|osd|window-switcher)$",
+	},
+	no_anim = true,
+	ignore_alpha = 0.2,
+	blur = true,
+	blur_popups = true,
+})
