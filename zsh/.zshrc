@@ -109,5 +109,3 @@ export DEVKITPRO=/opt/devkitpro
 export DEVKITARM=/opt/devkitpro/devkitARM
 export DEVKITPPC=/opt/devkitpro/devkitPPC
 
-export QT_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
