@@ -21,7 +21,7 @@ hl.bind(keys(main_mod, "r"), hl.dsp.exec_cmd("hyprctl reload; killall noctalia; 
 
 -- Screenshot and annotation
 hl.bind("print", hl.dsp.exec_cmd("noctalia msg screenshot-annotate"))
-hl.bind(keys("CTRL", "print"), hl.dsp.exec_cmd("noctalia msg screenshot-fullscreen"))
+hl.bind(keys("CTRL", "print"), hl.dsp.exec_cmd("noctalia msg screenshot-fullscreen"), { locked = true })
 hl.bind(keys("SHIFT", "print"), hl.dsp.exec_cmd("noctalia msg annotate"))
 
 -- Cycle windows
