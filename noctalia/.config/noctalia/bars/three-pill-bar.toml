@@ -1,0 +1,86 @@
+[bar.default]
+background_opacity = 0
+border_width = 0
+radius = 20
+thickness = 40
+concave_edge_corners = false
+widget_spacing = 8
+margin_ends = 0
+margin_edge = 6
+capsule_thickness = 1
+start = []
+end = []
+center = ["group:left1", "group:center", "group:right1"]
+
+[[bar.default.capsule_group]]
+id = "left1"
+members = ["media"]
+opacity = 0.65
+border_width = 1
+thickness = 40
+fill = "surface"
+border = "outline"
+padding = 12
+
+[[bar.default.capsule_group]]
+id = "center"
+members = ["workspaces"]
+opacity = 0.65
+border_width = 1
+thickness = 40
+fill = "surface"
+border = "outline"
+padding = 4
+
+[[bar.default.capsule_group]]
+id = "right1"
+members = ["battery", "volume", "network", "bluetooth", "notifications", "tray", "clock"]
+opacity = 0.65
+border_width = 1
+thickness = 40
+fill = "surface"
+border = "outline"
+padding = 16
+
+[bar.default.dead_zone.actions]
+middle = "panel-toggle session"
+
+[widget.battery]
+font_scale = 0.8
+
+[widget.clock]
+format = "%l:%M:%S\n%a, %b %e"
+
+[widget.network]
+show_label = false
+scale = 1.1
+
+[widget.bluetooth]
+scale = 1.1
+
+[widget.volume]
+show_label = false
+
+[widget.workspaces]
+scale = 1.7
+label_source = "name"
+active_pill_size = 1.5
+inactive_pill_size = 1.5
+occupied_color = "outline"
+font_family = "JetBrainsMono Nerd Font Propo"
+font_scale = 0.85
+anchor = true
+
+[widget.tray]
+detached_panel = true
+drawer = true
+hide_passive = false
+scale = 1.1
+capsule_padding = 40
+
+[widget.notifications]
+scale = 1.1
+
+[widget.media]
+artist_first = true
+max_length = 400

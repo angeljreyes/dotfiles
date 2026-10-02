@@ -1,0 +1,52 @@
+[bar.default]
+background_opacity = 0.65
+border_width = 1
+radius = 20
+thickness = 40
+concave_edge_corners = false
+widget_spacing = 8
+margin_ends = 400
+margin_edge = 6
+start = ["media"]
+center = ["workspaces"]
+end = ["battery", "volume", "network", "bluetooth", "notifications", "tray", "clock"]
+
+[bar.default.dead_zone.actions]
+middle = "panel-toggle session"
+
+[widget.battery]
+font_scale = 0.85
+
+[widget.clock]
+format = "%l:%M:%S %p\n%a, %b %e"
+
+[widget.network]
+show_label = false
+scale = 1.1
+
+[widget.bluetooth]
+scale = 1.1
+
+[widget.volume]
+show_label = false
+
+[widget.workspaces]
+scale = 1.7
+label_source = "name"
+active_pill_size = 1.5
+inactive_pill_size = 1.5
+occupied_color = "outline"
+font_family = "JetBrainsMono Nerd Font Propo"
+font_scale = 0.85
+
+[widget.tray]
+drawer = true
+hide_passive = false
+scale = 1.1
+
+[widget.notifications]
+scale = 1.1
+
+[widget.media]
+artist_first = true
+max_length = 400
