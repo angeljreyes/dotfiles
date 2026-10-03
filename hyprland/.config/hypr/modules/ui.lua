@@ -48,7 +48,7 @@ hl.config({
 	misc = {
 		force_default_wallpaper = 0,
 		font_family = "JetBrainsMono NF",
-		focus_on_activate = false,
+		focus_on_activate = true,
 		middle_click_paste = false,
 	},
 })

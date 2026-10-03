@@ -6,6 +6,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("udiskie")
 	hl.exec_cmd("playerctld")
 	hl.exec_cmd("easyeffects --gapplication-service")
+	hl.exec_cmd("hyprmoncfgd")
 
 	hl.exec_cmd(vars.terminal)
 	hl.exec_cmd("zen-browser")
