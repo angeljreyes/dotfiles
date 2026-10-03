@@ -25,8 +25,20 @@ hl.bind(keys("CTRL", "print"), hl.dsp.exec_cmd("noctalia msg screenshot-fullscre
 hl.bind(keys("SHIFT", "print"), hl.dsp.exec_cmd("noctalia msg annotate"))
 
 -- Cycle windows
-hl.bind(keys(main_mod, "tab"), hl.dsp.layout("cyclenext"), { repeating = true })
-hl.bind(keys(main_mod, "SHIFT", "tab"), hl.dsp.layout("cycleprev"), { repeating = true })
+hl.bind(keys(main_mod, "tab"), function()
+	if hl.get_active_workspace().tiled_layout == "monocle" then
+		hl.dispatch(hl.dsp.layout("cyclenext"))
+	else
+		hl.dispatch(hl.dsp.window.cycle_next())
+	end
+end, { repeating = true })
+hl.bind(keys(main_mod, "SHIFT", "tab"), function()
+	if hl.get_active_workspace().tiled_layout == "monocle" then
+		hl.dsp.layout("cycleprev")
+	else
+		hl.dispatch(hl.dsp.window.cycle_next({ next = false }))
+	end
+end, { repeating = true })
 
 -- Move focus
 hl.bind(keys(main_mod, "h"), hl.dsp.focus({ direction = "l" }), { repeating = true })
