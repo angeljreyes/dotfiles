@@ -1,6 +1,6 @@
 [include]
 files = [
-    "bars/three-pill-bar.toml"
+    "bars/three-pill-bar.toml",
 ]
 
 [shell]
@@ -64,6 +64,9 @@ shortcuts = [
     { type = "nightlight" },
     { type = "8bury/lid-guard:lid-guard-toggle" },
 ]
+
+[audio]
+enable_sounds = false
 
 [notification]
 background_opacity = 0.65
