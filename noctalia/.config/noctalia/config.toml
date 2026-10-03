@@ -39,6 +39,12 @@ blacklist = ["Mozilla Zen"]
 save_to_file = false
 confirm_region = true
 
+[wallpaper]
+directory = "~/Wallpapers"
+
+[wallpaper.default]
+path = "~/Wallpapers/wallhaven-8586my.png"
+
 [keybinds]
 up = ["up", "ctrl+p"]
 down = ["down", "ctrl+n"]
