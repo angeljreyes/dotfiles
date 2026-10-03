@@ -14,7 +14,7 @@ hl.bind(keys(main_mod, "space"), hl.dsp.exec_cmd(vars.menu))
 hl.bind(keys("ALT", "space"), hl.dsp.exec_cmd("fcitx5-remote --check && fcitx5-remote -e || fcitx5 -d"))
 hl.bind(keys(main_mod, "ALT", "space"), hl.dsp.send_shortcut({ mods = "ALT", key = "space" }))
 hl.bind(keys(main_mod, "period"), hl.dsp.exec_cmd("noctalia msg panel-toggle launcher '/calc '"))
-hl.bind(keys(main_mod, "p"), hl.dsp.exec_cmd("noctalia msg panel-toggle session"))
+hl.bind(keys(main_mod, "semicolon"), hl.dsp.exec_cmd("noctalia msg panel-toggle session"))
 hl.bind(keys(main_mod, "r"), hl.dsp.exec_cmd("hyprctl reload; killall noctalia; noctalia"))
 
 -- Screenshot and annotation
@@ -157,4 +157,4 @@ hl.bind(keys(main_mod, "1"), function() switch_layout("scrolling") end)
 hl.bind(keys(main_mod, "2"), function() switch_layout("dwindle") end)
 hl.bind(keys(main_mod, "3"), function() switch_layout("monocle") end)
 
-hl.bind(keys(main_mod, "semicolon"), function() Settings() end)
+hl.bind(keys(main_mod, "p"), hl.dsp.exec_cmd("noctalia msg panel-toggle launcher '/display '"))

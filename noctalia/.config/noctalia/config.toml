@@ -22,6 +22,13 @@ floating_offset = 6
 categories = false
 auto_paste = "off"
 
+[shell.launcher.dmenu.entry.display]
+command = "printf 'Mirror\nExtend\nMain monitor only'"
+label = "Display"
+prefix = "display"
+glyph = "device-desktop"
+exec = "hyprctl eval 'SetDefaultMonitorMode(\"{selection}\")' && hyprctl reload"
+
 [shell.greeter_sync]
 auto_sync = true
 
