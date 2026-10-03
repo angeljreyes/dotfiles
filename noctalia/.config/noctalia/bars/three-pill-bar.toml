@@ -84,3 +84,4 @@ scale = 1.1
 [widget.media]
 artist_first = true
 max_length = 400
+font_scale = 0.9
