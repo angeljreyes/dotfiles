@@ -104,6 +104,7 @@ export PATH=$PATH:~/.cargo/bin
 
 export NVIM_PROFILE='home'
 export EDITOR=nvim
+export TERMINAL=kitty
 
 export DEVKITPRO=/opt/devkitpro
 export DEVKITARM=/opt/devkitpro/devkitARM
