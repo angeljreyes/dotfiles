@@ -39,6 +39,10 @@ blacklist = ["Mozilla Zen"]
 save_to_file = false
 confirm_region = true
 
+[lockscreen]
+transition = ["zoom"]
+transition_duration = 500
+
 [wallpaper]
 directory = "~/Wallpapers"
 
