@@ -1,5 +1,3 @@
-local vars = require("modules.variables")
-
 hl.on("hyprland.start", function()
 	hl.exec_cmd("noctalia")
 
@@ -8,7 +6,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("easyeffects --gapplication-service")
 	hl.exec_cmd("hyprmoncfgd")
 
-	hl.exec_cmd(vars.terminal)
+	hl.exec_cmd(os.getenv("TERMINAL") or "kitty")
 	hl.exec_cmd("zen-browser")
 	hl.exec_cmd("discord --use-gl=desktop")
 	hl.exec_cmd("spotify-launcher")

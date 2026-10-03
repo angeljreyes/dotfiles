@@ -1,16 +1,14 @@
-local vars = require("modules.variables")
-
 local main_mod = "SUPER"
 
 local keys = function(...) return table.concat({ ... }, " + ") end
 
 -- Launch
-hl.bind(keys(main_mod, "return"), hl.dsp.exec_cmd(vars.terminal))
+hl.bind(keys(main_mod, "return"), hl.dsp.exec_cmd(os.getenv("TERMINAL") or "kitty"))
 hl.bind(keys(main_mod, "q"), hl.dsp.window.close())
 hl.bind(keys(main_mod, "SHIFT", "q"), hl.dsp.window.kill())
 hl.bind(keys(main_mod, "CTRL", "q"), hl.dsp.exec_cmd("hyprctl kill"))
 hl.bind(keys(main_mod, "v"), hl.dsp.exec_cmd("noctalia msg panel-toggle clipboard"))
-hl.bind(keys(main_mod, "space"), hl.dsp.exec_cmd(vars.menu))
+hl.bind(keys(main_mod, "space"), hl.dsp.exec_cmd("noctalia msg panel-toggle"))
 hl.bind(keys("ALT", "space"), hl.dsp.exec_cmd("fcitx5-remote --check && fcitx5-remote -e || fcitx5 -d"))
 hl.bind(keys(main_mod, "ALT", "space"), hl.dsp.send_shortcut({ mods = "ALT", key = "space" }))
 hl.bind(keys(main_mod, "period"), hl.dsp.exec_cmd("noctalia msg panel-toggle launcher '/calc '"))
