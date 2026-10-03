@@ -48,9 +48,7 @@ H.settings = {
 			extend = "Extend",
 			only_main = "Main monitor only",
 		},
-		callback = function()
-			hl.exec_cmd("hyprctl reload")
-		end,
+		callback = function() hl.exec_cmd("hyprctl reload") end,
 	},
 
 	airplane_mode = {
@@ -62,8 +60,8 @@ H.settings = {
 			else
 				hl.exec_cmd("rfkill unblock all")
 			end
-		end
-	}
+		end,
+	},
 }
 
 ---@param name string
@@ -146,9 +144,7 @@ end
 
 ---@param setting Setting
 ---@param value boolean | string
-H.set_value = function(setting, value)
-	setting.value = value
-end
+H.set_value = function(setting, value) setting.value = value end
 
 ---@param menu string
 ---@param callback fun(result: string)
@@ -208,9 +204,7 @@ local settings_meta = {
 		return setting == nil and nil or setting.value
 	end,
 
-	__call = function()
-		H.dmenu(H.get_menu(), H.setting_callback)
-	end,
+	__call = function() H.dmenu(H.get_menu(), H.setting_callback) end,
 }
 
 setmetatable(Settings, settings_meta)

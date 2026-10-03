@@ -2,9 +2,7 @@ local vars = require("modules.variables")
 
 local main_mod = "SUPER"
 
-local keys = function(...)
-	return table.concat({ ... }, " + ")
-end
+local keys = function(...) return table.concat({ ... }, " + ") end
 
 -- Launch
 hl.bind(keys(main_mod, "return"), hl.dsp.exec_cmd(vars.terminal))
@@ -72,10 +70,26 @@ hl.bind(keys(main_mod, "SHIFT", "c"), hl.dsp.window.move({ workspace = 7 }))
 
 -- Move window border
 local resize_amount = 20
-hl.bind(keys(main_mod, "CTRL", "h"), hl.dsp.window.resize({ x = -resize_amount, y = 0, relative = true }), { repeating = true })
-hl.bind(keys(main_mod, "CTRL", "j"), hl.dsp.window.resize({ x = 0, y = resize_amount, relative = true }), { repeating = true })
-hl.bind(keys(main_mod, "CTRL", "k"), hl.dsp.window.resize({ x = 0, y = -resize_amount, relative = true }), { repeating = true })
-hl.bind(keys(main_mod, "CTRL", "l"), hl.dsp.window.resize({ x = resize_amount, y = 0, relative = true }), { repeating = true })
+hl.bind(
+	keys(main_mod, "CTRL", "h"),
+	hl.dsp.window.resize({ x = -resize_amount, y = 0, relative = true }),
+	{ repeating = true }
+)
+hl.bind(
+	keys(main_mod, "CTRL", "j"),
+	hl.dsp.window.resize({ x = 0, y = resize_amount, relative = true }),
+	{ repeating = true }
+)
+hl.bind(
+	keys(main_mod, "CTRL", "k"),
+	hl.dsp.window.resize({ x = 0, y = -resize_amount, relative = true }),
+	{ repeating = true }
+)
+hl.bind(
+	keys(main_mod, "CTRL", "l"),
+	hl.dsp.window.resize({ x = resize_amount, y = 0, relative = true }),
+	{ repeating = true }
+)
 
 -- Resize scrolling window
 hl.bind(keys(main_mod, "CTRL", "minus"), hl.dsp.layout("colresize -conf"))
@@ -95,10 +109,26 @@ hl.bind(keys(main_mod, "mouse:273"), hl.dsp.window.resize(), { mouse = true })
 hl.bind(keys(main_mod, "mouse:274"), hl.dsp.window.float())
 
 -- Multimedia keys for volume and LCD brightness
-hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), { repeating = true, locked = true })
-hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"), { repeating = true, locked = true })
-hl.bind("XF86AudioMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"), { repeating = true, locked = true })
-hl.bind("XF86AudioMicMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"), { repeating = true, locked = true })
+hl.bind(
+	"XF86AudioRaiseVolume",
+	hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"),
+	{ repeating = true, locked = true }
+)
+hl.bind(
+	"XF86AudioLowerVolume",
+	hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"),
+	{ repeating = true, locked = true }
+)
+hl.bind(
+	"XF86AudioMute",
+	hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"),
+	{ repeating = true, locked = true }
+)
+hl.bind(
+	"XF86AudioMicMute",
+	hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),
+	{ repeating = true, locked = true }
+)
 hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl s 10%+"), { repeating = true, locked = true })
 hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl s 10%-"), { repeating = true, locked = true })
 hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"), { locked = true })
