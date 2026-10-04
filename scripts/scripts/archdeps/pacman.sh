@@ -8,11 +8,4 @@ yay -S --needed pacman-contrib informant reflector
 sudo systemctl enable paccache.timer
 sudo systemctl enable reflector.timer
 
-sudo tee /etc/xdg/reflector/reflector.conf << EOF
---save /etc/pacman.d/mirrorlist
---protocol https
---latest 5
---sort rate
-EOF
-
 echo "Add your user to the informant group with 'sudo usermod -aG informant <username>'"
