@@ -9,8 +9,3 @@ sudo systemctl enable --now bluetooth.service tuned.service
 # Use pipewire instead of pulseaudio.
 # Pulseaudio is buggy on this laptop.
 sudo systemctl --user enable --now pipewire pipewire-pulse wireplumber
-
-# Enable Bluetooth and WiFi coexistence, this allows Bluetooth and
-# WiFi to be enabled at the same time.
-echo "options iwlwifi bt_coex_active=1" | sudo tee /etc/modprobe.d/iwlwifi.conf
-sudo mobprobe -r iwlwifi && sudo modprobe iwlwifi
