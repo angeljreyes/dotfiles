@@ -80,7 +80,6 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza -1 --color=always $real
 alias ls='eza'
 alias ll='eza -alh'
 alias tree='eza --tree'
-alias cat='bat'
 alias py='python3.13'
 alias pip='py -m pip'
 alias dfr='df -h | grep -E "(^Filesystem|/$)"'
