@@ -86,6 +86,7 @@ alias pip='py -m pip'
 alias dfr='df -h | grep -E "(^Filesystem|/$)"'
 alias :q='exit'
 alias pacdiff='DIFFPROG="nvim -d" pacdiff -s'
+alias sudogit='sudo SSH_AUTH_SOCK=$SSH_AUTH_SOCK git -c "core.sshCommand=ssh -i $HOME/.ssh/id_ed25519" -c "include.path='"${XDG_CONFIG_DIR:-$HOME/.config}/git/config\" -c \"include.path=$HOME/.gitconfig\""
 
 eval "$(fzf --zsh)"
 export FZF_DEFAULT_OPTS=" \
