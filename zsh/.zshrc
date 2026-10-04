@@ -96,9 +96,6 @@ eval "$(zoxide init zsh --cmd cd)"
 
 eval "$(mise activate zsh)"
 
-# Load Angular CLI autocompletion.
-source <(ng completion script)
-
 export PATH=$PATH:~/.dotnet/tools
 export PATH=$PATH:~/.cargo/bin
 
