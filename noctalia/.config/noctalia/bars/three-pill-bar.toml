@@ -67,6 +67,7 @@ label_source = "name"
 active_pill_size = 1.5
 inactive_pill_size = 1.5
 occupied_color = "outline"
+change_color_on_hover = false
 font_family = "JetBrainsMono Nerd Font Propo"
 font_scale = 0.85
 anchor = true
