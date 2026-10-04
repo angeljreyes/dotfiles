@@ -75,6 +75,7 @@ enable_sounds = false
 [notification]
 background_opacity = 0.65
 offset_y = 20
+keep_dismissed_in_history = false
 
 [notification.filter.lid-guard]
 match_content = "^Lid Guard (enabled|disabled)$"
