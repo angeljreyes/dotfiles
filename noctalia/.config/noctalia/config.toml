@@ -89,6 +89,9 @@ auto_locate = true
 enabled = true
 temperature_night = 5000
 
+[osd]
+background_opacity=0.65
+
 [osd.kinds]
 keyboard_layout = false
 media = false
